@@ -24,5 +24,5 @@ deploy:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: ananyac9/psg_analyser
+    repo: ananyac9/SomnoPy
     python: 3.8

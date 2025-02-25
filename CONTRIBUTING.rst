@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/ananyac9/psg_analyser/issues.
+Report bugs at https://github.com/ananyac9/SomnoPy/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/ananyac9/psg_analyser/issues.
+The best way to send feedback is to file an issue at https://github.com/ananyac9/SomnoPy/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `psg_analyser` for local development.
+Ready to contribute? Here's how to set up `SomnoPy` for local development.
 
-1. Fork the `psg_analyser` repo on GitHub.
+1. Fork the `SomnoPy` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/psg_analyser.git
+    $ git clone git@github.com:your_name_here/SomnoPy.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv psg_analyser
-    $ cd psg_analyser/
+    $ mkvirtualenv somnopy
+    $ cd somnopy/
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -104,7 +104,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 3.5, 3.6, 3.7 and 3.8, and for PyPy. Check
-   https://travis-ci.com/ananyac9/psg_analyser/pull_requests
+   https://travis-ci.com/ananyac9/SomnoPy/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -113,7 +113,7 @@ Tips
 To run a subset of tests::
 
 
-    $ python -m unittest tests.test_psg_analyser
+    $ python -m unittest tests.test_somnopy
 
 Deploying
 ---------

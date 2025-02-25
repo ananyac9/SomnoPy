@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "psg_analyser"
+name = "somnopy"
 version = "0.1.0"
 description = "Exploratory data analysis and crude sleep scoring for OSA reports"
 readme = "README.rst"
@@ -31,9 +31,9 @@ dev = [
 
 [project.urls]
 
-bugs = "https://github.com/ananyac9/psg_analyser/issues"
-changelog = "https://github.com/ananyac9/psg_analyser/blob/master/changelog.md"
-homepage = "https://github.com/ananyac9/psg_analyser"
+bugs = "https://github.com/ananyac9/SomnoPy/issues"
+changelog = "https://github.com/ananyac9/SomnoPy/blob/master/changelog.md"
+homepage = "https://github.com/ananyac9/SomnoPy"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

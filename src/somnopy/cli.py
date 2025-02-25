@@ -1,5 +1,5 @@
-"""Console script for psg_analyser."""
-import psg_analyser
+"""Console script for somnopy."""
+import somnopy
 
 import typer
 from rich.console import Console
@@ -10,9 +10,9 @@ console = Console()
 
 @app.command()
 def main():
-    """Console script for psg_analyser."""
+    """Console script for somnopy."""
     console.print("Replace this message by putting your code into "
-               "psg_analyser.cli.main")
+               "somnopy.cli.main")
     console.print("See Typer documentation at https://typer.tiangolo.com/")
     
 

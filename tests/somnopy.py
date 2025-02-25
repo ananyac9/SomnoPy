@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
-"""Tests for `psg_analyser` package."""
+"""Tests for `somnopy` package."""
 
 
 import unittest
 
-from psg_analyser import psg_analyser
+from somnopy import somnopy
 
 
-class TestPsg_analyser(unittest.TestCase):
-    """Tests for `psg_analyser` package."""
+class Testsomnopy(unittest.TestCase):
+    """Tests for `somnopy` package."""
 
     def setUp(self):
         """Set up test fixtures, if any."""

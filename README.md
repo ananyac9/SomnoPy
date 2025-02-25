@@ -1,7 +1,7 @@
 # Polysomnography Analyser
 
-![PyPI Version](https://img.shields.io/pypi/v/psg_analyser.svg)
-[![Build Status](https://img.shields.io/travis/ananyac9/psg_analyser.svg)](https://travis-ci.com/ananyac9/psg_analyser)
+![PyPI Version](https://img.shields.io/pypi/v/SomnoPy.svg)
+[![Build Status](https://img.shields.io/travis/ananyac9/SomnoPy.svg)](https://travis-ci.com/ananyac9/SomnoPy)
 [![Documentation Status](https://readthedocs.org/projects/psg-analyser/badge/?version=latest)](https://psg-analyser.readthedocs.io/en/latest/?version=latest)
 
 Exploratory data analysis and crude sleep scoring for OSA reports.
@@ -12,7 +12,7 @@ Exploratory data analysis and crude sleep scoring for OSA reports.
 ## Import:
 
 ```python
-from psg_analyser import EDA, CrudeScoring, SleepStages
+from somnopy import EDA, CrudeScoring, SleepStages
 ```
 
 ## EDA:
