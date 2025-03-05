@@ -78,7 +78,7 @@ class EDA:
         df_cv = pd.DataFrame(list(cv_dict.items()), columns=['Channel', 'Coefficient of Variation'])
         df_cv = df_cv.sort_values(by='Coefficient of Variation', ascending=False)
         plt.figure(figsize=(20, 10))
-        plt.plot(df_cv['Channel'], df_cv['Coefficient of Variation'])
+        plt.plot(df_cv['Channel'], df_cv['Coefficient of Variation'], marker='o')
         plt.title("Coefficient of Variation of Channels")
         plt.xlabel("Channel")
         plt.ylabel("Coefficient of Variation")
@@ -95,6 +95,7 @@ class EDA:
         plt.show()
 
     def plot_cv_dendrogram(cv_dict):
+        df = pd.DataFrame.from_dict(cv_dict, orient='index', columns=['Coefficient of Variation'])
         df = df.replace([np.inf, -np.inf], np.nan).dropna(axis=0)
         Z = linkage(df, method='ward')
         plt.figure(figsize=(20, 10))
@@ -225,8 +226,8 @@ class CrudeScoring:
 
         return count, time_drops
 
-    def plot_signal_with_apnea_drops(fp2_signal, timestamps):
-        count, time_drops = CrudeScoring.count_obstructive_apnea(fp2_signal, timestamps)
+    def plot_signal_with_apnea_drops(fp2_signal, freq, timestamps):
+        count, time_drops = CrudeScoring.count_obstructive_apnea(fp2_signal, freq, timestamps)
         plt.figure(figsize=(12, 6))
         plt.plot(timestamps, fp2_signal, label='FP2 Signal')
         
@@ -262,8 +263,8 @@ class CrudeScoring:
 
         return count, time_drops        
 
-    def plot_signals_with_hypopnea_drops(fp1_data, spo2_data, timestamps):
-        count, time_drops = CrudeScoring.count_obstructive_hypopnea(fp1_data, spo2_data, timestamps)
+    def plot_signals_with_hypopnea_drops(fp1_data, spo2_data, freq, timestamps):
+        count, time_drops = CrudeScoring.count_obstructive_hypopnea(fp1_data, spo2_data, freq, timestamps)
         
         plt.figure(figsize=(12, 6))
         
@@ -296,11 +297,12 @@ class CrudeScoring:
         else:
             end_index = 3600
         plt.figure(figsize=(12, 6))
-        plt.plot(signal[start_index:end_index])
+        plt.plot(signal[start_index:end_index], label='FP2 signal')
         plt.axvspan(10, end_time-start_time+10, color='red', alpha=0.5, label='Apnea Drop')
         plt.title(f'Zoomed Plot for OA at hour {hour+1}, {int(start_time)} to {int(end_time)}')
         plt.xlabel('Time')
         plt.ylabel('Signal')
+        plt.legend()
         plt.show()    
 
     def zoomed_plot_oh(start_time, end_time, fp1_data, spo2_data, hour):
@@ -318,7 +320,7 @@ class CrudeScoring:
         plt.axvspan(10, end_time-start_time+10, color='red', alpha=0.5, label='Apnea Drop')
         plt.xlabel('Time')
         plt.ylabel('Signal Value')
-        plt.title(f'Zoomed Plot for OA for at hour {hour+1}, {int(start_time)} to {int(end_time)}')
+        plt.title(f'Zoomed Plot for OH for at hour {hour+1}, {int(start_time)} to {int(end_time)}')
         plt.legend()
         plt.show()
 
